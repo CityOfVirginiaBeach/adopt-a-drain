@@ -1,6 +1,6 @@
 {
   "name": "adopt-a-drain",
-  "description": "Adopt-a-Drain SF Review App",
+  "description": "Adopt-a-Drain VB Review App",
   "scripts": {
     "postdeploy": "bundle exec rake db:schema:load db:seed"
   },
