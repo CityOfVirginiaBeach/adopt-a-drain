@@ -43,7 +43,7 @@ input#user_existing {
 form select, button.btn, input[type="submit"].btn {
 }
 
-.btn-primary {
+.xbtn-primary {
   color: #ffffff;
   background-color: #8871B3;
   border-color: #8871B3;

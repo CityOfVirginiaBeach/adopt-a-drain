@@ -4,6 +4,6 @@ namespace :data do
   task load_things: :environment do
     require 'thing_importer'
 
-    ThingImporter.load('https://data.sfgov.org/api/views/jtgq-b7c5/rows.csv?accessType=DOWNLOAD')
+    ThingImporter.load('https://dev.vbgov.com/_assets/_apis/CVB-Drains.csv')
   end
 end

@@ -11,7 +11,7 @@ class MainControllerTest < ActionController::TestCase
   test 'should return the home page' do
     get :index
     assert_response :success
-    assert_select 'title', 'Adopt-a-Drain San Francisco'
+    assert_select 'title', 'Adopt-a-Drain Virginia Beach'
     assert_select 'button#tagline', 'What does it mean to adopt a drain?'
   end
 
