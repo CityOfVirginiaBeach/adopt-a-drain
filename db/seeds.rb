@@ -19,7 +19,7 @@ open(url) do |f|
   f.each_line do |l|
     CSV.parse(l) do |row|
       
-      if(row[0] == "OBJECTID_1")
+      if(row[0] == "objectid_1")
         next
       else
         city_id = row[0].to_i

@@ -4,7 +4,7 @@ var constants = window.constants
 
 $(function() {
   var initialLocation;
-  var center = new google.maps.LatLng(36.7484416,-76.0032849);
+  var center = new google.maps.LatLng(36.751607,-76.0593627);
   var browserSupportFlag =  new Boolean();
   var errorClass = 'has-error';
   var current_user_id = $('#current_user_id').val() ? $('#current_user_id').val() : '';
@@ -20,7 +20,7 @@ $(function() {
     rotateControl: false,
     scaleControl: false,
     streetViewControl: true,
-    zoom: 15,
+    zoom: 17,
     zoomControl: true,
     styles: [{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}]
   };
@@ -66,11 +66,13 @@ $(function() {
     origin,
     anchor
   );
+  /*    
   var toBayOceanMarker = new google.maps.MarkerImage(constants.toBayOceanMarkerImage,
     size,
     origin,
     anchor
   );
+  */
   var markerShadowImage = new google.maps.MarkerImage(constants.markerShadowImage,
     new google.maps.Size(46.0, 37.0),
     origin,
@@ -84,15 +86,17 @@ $(function() {
 
   var icons = {
     available: {
-      name: 'Drains to Sewer',
+      name: 'Available Drains',
       title:  'Sewer',
       icon: constants.toSewerMarkerImage
     },
+    /*
     availableBay: {
       name: 'Drains to Ocean/Bay',
       title: 'Sewer to ocean/bay',
       icon: constants.toBayOceanMarkerImage
     },
+    */
     adopted: {
       name: 'Adopted',
       title:  'Adopted by other',

@@ -88,7 +88,7 @@ h5.my-things {
 }
 
 .sidebar .navbar {
-  background-color: #ffffff;
+  background-color: #3a6b80;
 }
 
 .sidebar {
@@ -260,6 +260,6 @@ a.guidelines {
 
   #legend {
     right: auto;
-    min-width: 594px;
+    min-width: 400px;
   }
 }
