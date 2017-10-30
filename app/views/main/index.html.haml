@@ -35,17 +35,13 @@
             %button.btn.btn-block.btn-primary#tagline
               = t("defaults.tagline")
         #logos
-        -#  .row
+          .row
             .col-xs-8
               %a{:href => "http://code4hr.org/"}
                 = image_tag "logos/CodeForHR.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
             .col-xs-4
               %a{:href => "http://codeforamerica.org/"}
                 = image_tag "logos/cfa.jpg", :alt => t("sponsors.cfa"), :title => t("sponsors.cfa"), :class => "cfa"
-          .row
-            .col-xs-12
-              %a{:href => "https://www.vbgov.com"}
-                = image_tag "logos/vb-logo-h.png", :alt => t("sponsors.datasf"), :title => t("sponsors.datasf"), :class => "datasf"
                 
     .col-md-9.map-container
       #map

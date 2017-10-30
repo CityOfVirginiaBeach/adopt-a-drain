@@ -7,6 +7,7 @@ class CreateThings < ActiveRecord::Migration
       t.decimal :lng, null: false, precision: 17, scale: 14
       t.integer :city_id
       t.integer :user_id
+      t.text :drain_id
     end
 
     add_index :things, :city_id, unique: true

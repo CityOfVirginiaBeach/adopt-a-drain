@@ -55,6 +55,7 @@ en:
     last_name: "Last name"
     name_thing: "Give this %{thing} a name"
     my_things: "My adopted %{things}"
+    drain_id: "Drain ID: "
     organization: "Organization"
     password: "Password"
     password_choose: "Choose a password"
