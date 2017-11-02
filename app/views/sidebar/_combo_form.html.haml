@@ -48,6 +48,8 @@
       .help-block
     %p.tos
       = t("defaults.tos", :tos => link_to(t("titles.tos"), "#tos", :id => "tos_link", :"data-toggle" => "modal", :"data-target" => "#tos")).html_safe
+    .check_box
+      = f.label "tos_confirm", check_box_tag("tos_confirm", "tos_confirm", false, :"disabled" => true).html_safe + t("defaults.tos_confirm")
     .form-actions
       = f.submit t("buttons.sign_up"), :class => "btn btn-primary btn-block"
   %fieldset#user_sign_in_fields{:style => "display: none;"}
@@ -71,3 +73,12 @@
       = f.submit t("buttons.email_password"), :class => "btn btn-primary btn-block"
 %a{:href => search_path, :class => "link btn btn-default"}
   = t("buttons.back")
+
+:javascript
+  $(function() {
+    $('#tos_link').on('click', function(){
+              $('input[type=checkbox]').removeAttr("disabled");
+            });
+  });
+
+

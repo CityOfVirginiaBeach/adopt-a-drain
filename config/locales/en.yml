@@ -38,7 +38,8 @@ en:
     things: "drains"
     this_thing: "This %{thing}"
     tagline: "What does it mean to adopt a drain?"
-    tos: "By signing up, you agree to the %{tos}."
+    tos: "Before signing up, you must read the %{tos}."
+    tos_confirm: "I have read the Terms of Service."
     voice_number: "757-555-1212"
     zip: "23462"
   errors:
@@ -118,3 +119,4 @@ en:
     mayor:
       name: "William Sessoms"
       title: "Mayor"
+    vbworks: "VB Works"

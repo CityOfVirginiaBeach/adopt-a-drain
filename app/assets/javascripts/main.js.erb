@@ -2,6 +2,20 @@
 
 var constants = window.constants
 
+$( document ).ready(function() {
+if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
+    var DeviceName = WURFL.complete_device_name;
+    
+    if (DeviceName.includes('Apple')) {
+        console.log(DeviceName);    
+    }
+    else
+    {
+        console.log("This is an Android"); // iphone
+    }
+}
+});
+
 $(function() {
   var initialLocation;
   var center = new google.maps.LatLng(36.751607,-76.0593627);
@@ -356,7 +370,7 @@ $(function() {
     }
     return false;
   });
-
+    
   $('body').on('click', '.thing-link', function() {
     zoomTo($(this).data('lat'), $(this).data('lng'), 20);
   });
@@ -425,6 +439,19 @@ $(function() {
       } else {
         $('#user_last_name').parent().removeClass(errorClass);
       }
+      /*    
+      Jason Added Start 11/1/2017
+      */        
+      if(!$('input[type=checkbox]').prop('checked')) {
+        errors.push($('#tos_confirm'));
+        $('#tos_confirm').parent().addClass(errorClass);
+      } else {
+        $('#tos_confirm').parent().removeClass(errorClass);
+      }
+      /*    
+      Jason Added End 11/1/2017
+      */        
+        
       if($('#user_password_confirmation').val().length < 6 || $('#user_password_confirmation').val().length > 20) {
         errors.push($('#user_password_confirmation'));
         $('#user_password_confirmation').parent().addClass(errorClass);
