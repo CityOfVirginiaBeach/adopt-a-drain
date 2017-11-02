@@ -39,17 +39,14 @@ To setup a local development environment with
 [Docker](https://docs.docker.com/engine/installation/).   
 
 ```
-# Override database settings as the docker host:
-echo DB_HOST=db > .env
-echo DB_USER=postgres >> .env
+# Build containers
+docker-compose build
 
 # Setup your docker based postgres database:
 docker-compose run --rm web bundle exec rake db:setup
 
 # Load data:
-docker-compose run --rm web bundle exec rake data:load_drains
-# OR: don't load all that data, and load the seed data:
-# docker-compose run --rm web bundle exec rake db:seed
+docker-compose run --rm web bundle exec rake db:seed
 
 # Start the web server:
 docker-compose up
