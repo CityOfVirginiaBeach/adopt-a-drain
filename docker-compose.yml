@@ -8,7 +8,9 @@ services:
             POSTGRES_PASSWORD: Iskids01! 
             POSTGRES_DB: adopta
         ports:
-            - "5432:5432" # for local dev access
+            - "55432:5432" # for local dev access
+        volumes:
+            - postgres:/var/lib/postgresql/data
     web:
         build: .
         entrypoint: /usr/local/bin/docker-entrypoint-dev.sh
@@ -27,3 +29,6 @@ services:
         depends_on:
             - db
         restart: on-failure
+
+volumes:
+    postgres:
