@@ -427,6 +427,9 @@ $(function() {
       $('#user_email').parent().removeClass(errorClass);
     }
     if(!$(this).data('state') || $(this).data('state') === 'user_sign_up') {
+        event.preventDefault(); // Here triggering stops
+            $('#tos').modal({backdrop: 'static', keyboard: true, show: true});       
+        return;
       if($('#user_first_name').val() === '') {
         errors.push($('#user_first_name'));
         $('#user_first_name').parent().addClass(errorClass);
@@ -441,14 +444,12 @@ $(function() {
       }
       /*    
       Jason Added Start 11/1/2017
-      */        
       if(!$('input[type=checkbox]').prop('checked')) {
         errors.push($('#tos_confirm'));
         $('#tos_confirm').parent().addClass(errorClass);
       } else {
         $('#tos_confirm').parent().removeClass(errorClass);
       }
-      /*    
       Jason Added End 11/1/2017
       */        
         

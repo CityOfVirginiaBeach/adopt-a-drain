@@ -27,7 +27,7 @@
           - elsif @reset_password_token.present?
             = render :partial => 'passwords/edit'
           - else
-            %iframe{ :width => "100%", :height => "300px", :src => "https://www.youtube.com/embed/fkWDjK2y9jQ", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
+            -#%iframe{ :width => "100%", :height => "300px", :src => "https://www.youtube.com/embed/fkWDjK2y9jQ", :frameborder => "0", :allowfullscreen => "allowfullscreen" }
             = render :partial => "sidebar/search"
         -# Corresponds to guideline div above
         %div.hidden.visible-xs-block
@@ -36,16 +36,16 @@
               = t("defaults.tagline")
         #logos
           .row
-            .col-xs-4
+            .col-xs-6
               %a{:href => "https://www.vbgov.com/services/Pages/report-problems.aspx", :id => "vbworks", :target => "_blank"}
                 = image_tag "logos/vb-works.jpg", :alt => t("sponsors.vbworks"), :title => t("sponsors.vbworks"), :class => "cfsf"
-            .col-xs-4
-              %a{:href => "http://code4hr.org/"}
-                = image_tag "logos/CodeForHR.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
-            .col-xs-4
+            .col-xs-6
               %a{:href => "http://codeforamerica.org/"}
                 = image_tag "logos/cfa.jpg", :alt => t("sponsors.cfa"), :title => t("sponsors.cfa"), :class => "cfa"
-                
+          .row
+            .col-xs-12
+              %a{:href => "http://code4hr.org/"}
+                = image_tag "logos/CodeForHR.png", :alt => t("sponsors.built"), :title => t("sponsors.built"), :class => "cfsf"
     .col-md-9.map-container
       #map
         &nbsp;
