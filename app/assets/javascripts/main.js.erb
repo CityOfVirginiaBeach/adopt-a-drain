@@ -5,13 +5,12 @@ var constants = window.constants
 $( document ).ready(function() {
 if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone") {
     var DeviceName = WURFL.complete_device_name;
-    
     if (DeviceName.includes('Apple')) {
-        console.log(DeviceName);    
+        $("#vbworks").attr("href", "https://itunes.apple.com/us/app/vb-works/id895997360?mt=8")
     }
     else
     {
-        console.log("This is an Android"); // iphone
+        $("#vbworks").attr("href", "https://play.google.com/store/apps/details?id=com.seeclickfix.vbworks.app")
     }
 }
 });
