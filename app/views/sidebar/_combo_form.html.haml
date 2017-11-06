@@ -76,9 +76,10 @@
 
 :javascript
   $(function() {
-    $('#tos_link').on('click', function(){
-              $('input[type=checkbox]').removeAttr("disabled");
-            });
+    $('#close').on('click', function(){
+       $('input[type=checkbox]').removeAttr("disabled");
+              $('#tos_confirm').attr('checked', true);
+    });
   });
 
 

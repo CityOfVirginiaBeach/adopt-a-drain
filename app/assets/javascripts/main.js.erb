@@ -444,6 +444,7 @@ $(function() {
       if(!$('input[type=checkbox]').prop('checked')) {
         errors.push($('#tos_confirm'));
         $('#tos_confirm').parent().addClass(errorClass);
+        $('#tos').modal('show'); //Open tos modal
       } else {
         $('#tos_confirm').parent().removeClass(errorClass);
       }
