@@ -2,13 +2,12 @@
 require File.expand_path('../application', __FILE__)
 
 ActionMailer::Base.smtp_settings = {
-  address: 'smtp.sendgrid.net',
+  address: 'email-smtp.us-east-1.amazonaws.com',
   port: '587',
-  authentication: :plain,
-  user_name: ENV['SENDGRID_USERNAME'],
-  password: ENV['SENDGRID_PASSWORD'],
-  domain: 'heroku.com',
-  enable_starttls_auto: true,
+  authentication: :login,
+  user_name: ENV["SES_SMTP_USERNAME"],
+  password: ENV["SES_SMTP_PASSWORD"],
+  enable_starttls_auto: true
 }
 
 # Initialize the Rails application.

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'Adopt a Drain SF <info@sfwater.org>'
+  default from: 'Adopt a Drain VB <comitmobileteam@vbgov.com>'
   layout 'mailer'
 end
