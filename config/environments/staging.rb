@@ -6,7 +6,7 @@ Rails.application.configure do
 
   # asset host
   # $HEROKU_APP_NAME is used for review apps
-  config.action_controller.asset_host = "https://#{ENV['HEROKU_APP_NAME'] || 'adoptadrainsf-staging'}.herokuapp.com/"
+  config.action_controller.asset_host = "http://#{ENV['HEROKU_APP_NAME']}"
   config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Eager load code on boot. This eager loads most of Rails and
