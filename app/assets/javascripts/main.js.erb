@@ -631,6 +631,16 @@ $(function() {
             activeInfoWindow.open(map, activeMarker);
             activeMarker.setIcon(adoptedByYouMarker);
             activeMarker.setAnimation(google.maps.Animation.BOUNCE);
+            //Call below updates the sidebar with information when drain is adopted
+            $.ajax({
+              type: 'GET',
+              url: '/sidebar/search',
+              success: function(data) {
+                $('#content').html(data);
+                current_user_id = $('#current_user_id').val();
+                flipMarkers();
+              }
+            });
           }
         });
       }
@@ -671,6 +681,15 @@ $(function() {
               activeInfoWindow.open(map, activeMarker);
               activeMarker.setIcon(toSewerMarker);
               activeMarker.setAnimation(null);
+              //Call below updates the sidebar with information when drain is abandoned
+              $.ajax({
+                type: 'GET',
+                url: '/sidebar/search',
+                success: function(data) {
+                  $('#content').html(data);
+                  current_user_id = $('#current_user_id').val();
+                }
+              });
             }
           });
         }
