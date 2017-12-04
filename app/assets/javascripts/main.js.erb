@@ -602,6 +602,13 @@ $(function() {
   $('#map').on('submit', '#adoption_form', function() {
     var submitButton = $("#adoption_form input[type='submit']");
     $(submitButton).attr("disabled", true);
+    let drainName = "";
+    if($('#thing_name').val().length > 0){
+        drainName = $('#thing_name').val();
+      }
+      else{
+        drainName = "My Adopted Drain";
+      }
     $.ajax({
       type: 'POST',
       url: '/things.json',
@@ -612,7 +619,7 @@ $(function() {
         'authenticity_token': $('#adoption_form input[name="authenticity_token"]').val(),
         'thing': {
           'user_id': $('#thing_user_id').val(),
-          'name': $('#thing_name').val()
+          'name': drainName
         }
       },
       error: function(jqXHR) {
