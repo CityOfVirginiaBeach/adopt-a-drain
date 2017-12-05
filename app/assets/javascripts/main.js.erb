@@ -602,7 +602,7 @@ $(function() {
   $('#map').on('submit', '#adoption_form', function() {
     var submitButton = $("#adoption_form input[type='submit']");
     $(submitButton).attr("disabled", true);
-    let drainName = "";
+    var drainName = "";
     if($('#thing_name').val().length > 0){
         drainName = $('#thing_name').val();
       }

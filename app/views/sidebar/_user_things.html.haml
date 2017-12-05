@@ -3,7 +3,10 @@
   %dl
     - current_user.things.each do |thing|
       %dt
-        %a.thing-link{ :data => { :lng => thing.lng, :lat => thing.lat } }=thing.name
-      -# %dd=drain_id= t('labels.drain_id') + thing.drain_id
-      %dd=thing.street_address
+        %a.thing-link{ :data => { :lng => thing.lng, :lat => thing.lat }}= thing.name
+
+      -#  %dd=drain_id= t('labels.drain_id') + thing.drain_id
+
+      %dd
+        = thing.street_address
   .break
