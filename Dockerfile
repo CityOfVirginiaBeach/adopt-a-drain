@@ -9,7 +9,15 @@ RUN gem install bundler && bundle install
 
 EXPOSE 3000
 
+ENV RAILS_ENV=production \
+    RACK_ENV=production \
+    RAILS_SERVE_STATIC_FILES=true\
+    LANG="en_US.UTF-8"\
+    PORT=3000
+    
 COPY . .
+
+RUN rake assets:precompile
 
 CMD [ "bundle", "exec", "rails", "server", "-p", "3000", "-b", "0.0.0.0" ]
 

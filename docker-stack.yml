@@ -1,0 +1,61 @@
+version: '3.3'
+
+services:
+    web:
+        image: cityofvb/adopt-a-drain
+        ports:
+            - "80:3000"
+        #environment:
+            #DB_HOST: vb-adopt-a-drain-db-cg-2.csbbjors1hji.us-east-1.rds.amazonaws.com
+            #DB_USER: ${DB_USER}
+            #DB_NAME: adopt_a_drain
+            #DB_PASSWORD: ${DB_PASSWORD}
+            
+        deploy:
+            replicas: 2
+        
+        secrets:
+            - source: adoptadbpassword-20171207
+              target: DB_PASSWORD
+            - source: dbuser-20171201
+              target: DB_USER
+            - source: gmapsapikey-20171202
+              target: GOOGLE_MAPS_JAVASCRIPT_API_KEY
+            #- source: secretkeybase-20171203
+            #  target: SECRET_BASE_KEY
+            - source: skylightauth-20171201
+              target: SKYLIGHT_AUTHENTICATION
+            - source: smtpusername-20171201
+              target: SES_SMTP_USERNAME
+            - source: smtppassword-20171201
+              target: SES_SMTP_PASSWORD
+            - source: dburl-20171204
+              target: DATABASE_URL
+
+secrets: 
+    adoptadbpassword-20171207:
+        external: true
+    dbuser-20171201:
+        external: true
+    gmapsapikey-20171202:
+        external: true
+    #secretkeybase-20171203:
+    #    external: true
+    skylightauth-20171201:
+        external: true
+    smtpusername-20171201:
+        external: true
+    smtppassword-20171201:
+        external: true
+    dburl-20171204:
+        external: true
+    
+    
+        
+    
+    
+    
+
+
+
+
