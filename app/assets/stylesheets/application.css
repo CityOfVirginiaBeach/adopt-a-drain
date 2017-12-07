@@ -88,7 +88,7 @@ h5.my-things {
 }
 
 .sidebar .navbar {
-  background-color: #3a6b80;
+  background-color: #f1f1f1;
 }
 
 .sidebar {
@@ -250,7 +250,7 @@ a.guidelines {
   }
 
   .navbar img {
-    max-width: 60%;
+    max-width: 30%;
     margin: 5px;
   }
 
