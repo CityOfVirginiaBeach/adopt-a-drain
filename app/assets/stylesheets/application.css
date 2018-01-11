@@ -18,6 +18,26 @@
 body, html {
   height: 100%;
   width: 100%;
+  display: flex;
+}
+
+.container-fluid {
+  display: flex;
+  width: 100%;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  width: 100%;
 }
 
 div#logos {
@@ -108,7 +128,7 @@ h5.my-things {
 }
 
 .signed-in .sidebar {
-  height: 210px;
+  height: auto;
   position: relative;
 }
 
@@ -141,6 +161,7 @@ h5.my-things {
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
+  border-bottom: 1px solid black;
 }
 
 .navbar-toggle {
@@ -204,9 +225,11 @@ h5.my-things {
   right: 50px;
 }
 
-#legend div {
-  display: inline-block;
-  margin-right: 15px;
+.legend-items {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #legend .title {
@@ -231,7 +254,7 @@ a.guidelines {
   margin-left: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 851px) {
   .sidebar, .signed-in .sidebar {
     height: 100%;
     position: absolute;
@@ -242,6 +265,56 @@ a.guidelines {
     overflow: scroll;
     overflow-x: hidden;
   }
+}
+
+/*CSS to handle mobile screens better*/
+@media (max-width: 850px) {
+  .row {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  #legend {
+    min-width: auto !important;
+    left: 5px !important;
+    right: 40px !important;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar-content {
+    display: none;
+  }
+
+  .sidebar button.navbar-toggle {
+    display: block !important;
+  }
+
+  .map-container {
+    width: 100% !important;
+  }
+
+  .navbar img {
+    margin: 0px !important;
+    max-height: 80px;
+    padding-bottom: 5px;
+  }
+
+  .sidebar-full {
+    height: 100% !important;
+    overflow: scroll;
+  }
+
+  .sidebar-full .sidebar-content {
+    display: block;
+  }
+}
+/*End Css for mobile*/
 
   .signed-in .map-container, .map-container {
     width: 75%;
