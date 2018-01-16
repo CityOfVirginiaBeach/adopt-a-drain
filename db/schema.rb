@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20161205030306) do
     t.decimal  "lng",             precision: 17, scale: 14, null: false
     t.integer  "city_id"
     t.integer  "user_id"
-    t.text "drain_id"
     t.string   "system_use_code"
     t.datetime "deleted_at"
   end

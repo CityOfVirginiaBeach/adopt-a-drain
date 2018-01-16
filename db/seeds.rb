@@ -19,13 +19,12 @@ open(url) do |f|
   f.each_line do |l|
     CSV.parse(l) do |row|
       
-      if(row[0] == "objectid_1")
+      if(row[4] == "OBJECTID")
         next
       else
-        city_id = row[0].to_i
-        drain_id = row[2]
-        lat = row[6].to_f
-        lng = row[7].to_f
+        city_id = row[3].to_i
+        lat = row[2].to_f
+        lng = row[1].to_f
         puts "#{row} "        
 
         if city_id > 1        
@@ -34,14 +33,14 @@ open(url) do |f|
           
           drain = Thing.find_by_city_id( city_id )
           
-          puts "#{city_id} #{lng} #{lat} #{drain_id}"
+          puts "#{city_id} #{lng} #{lat}"
           
           if drain
-            puts "UPDATING #{city_id} #{lng} #{lat} #{drain_id} "                    
+            puts "UPDATING #{city_id} #{lng} #{lat} "                    
             update_thing = update_thing + 1            
           else
-            puts "CREATING NEW #{city_id} #{lng} #{lat} #{drain_id} "        
-            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat, :drain_id => drain_id})          
+            puts "CREATING NEW #{city_id} #{lng} #{lat} "        
+            drain = Thing.new({:city_id => city_id, :lng => lng, :lat => lat})          
             create_thing = create_thing + 1            
           end
           
