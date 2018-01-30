@@ -104,7 +104,7 @@ en:
     sign_in: "Sign in to adopt this %{thing}"
     thank_you: "Thank you for adopting this %{thing}!"
     email_text: "I just adopted one of Virginia Beach's 40,000+ storm drains and pledged to help keep it clear of leaves and debris. You, too, can Adopt a Drain and help the City avoid flooding at %{root_url}."
-    tweet_text: "Trash in the streets ends up in our waterways. I adopted my VB storm drain at %{root_url}. Claim and name yours @CityofVaBeach #AdoptaDrainVB or #VBstormwater"
+    tweet_text: "Trash in the streets ends up in our waterways. I adopted my VB storm drain at %{root_url}. Claim and name yours! @CityofVaBeach #AdoptaDrainVB #VBstormwater"
     tos: "Terms of Service"
   site:
     description: "You can adopt one of Virginia Beach's 40,000+ storm drains and pledge to help keep it clear of leaves and debris this rainy season. Lend a hand and help the City avoid flooding."
