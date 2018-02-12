@@ -3,8 +3,6 @@
     .form-group
       %label.control-label{:for => "user_email", :id => "user_email_label"}
         = t("labels.email")
-        %small
-          = t("captions.private")
       = f.email_field "email", :value => params[:user] ? params[:user][:email] : nil, :class => "form-control"
     .radio
       = f.label "new" , radio_button_tag("user", "new", true).html_safe + t("labels.user_new")
