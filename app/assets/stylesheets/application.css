@@ -40,8 +40,6 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -60,7 +58,7 @@ div#logos {
 }
 
 div#logos img {
-  width: 100%;
+  width: 75%;
 }
 
 .user-things{
