@@ -3,9 +3,10 @@ require 'open-uri'
 
 
 
-#url = '/Users/jmhall/Downloads/CVB-Drains.csv'
+# url = '/Users/jmhall/Downloads/CVB-Drains.csv'
 # url = 'http://data.openoakland.org/storage/f/2012-11-01T014902/Inlets.csv'
-url = 'https://www.vbgov.com/_assets/_apis/CVB-Drains.csv'
+# url = 'https://www.vbgov.com/_assets/_apis/CVB-Drains.csv'
+url = 'https://media.vbgov.com/rea/adopta/CVB-drains.csv'
 
 # puts 'removing old things data'
 # Thing.destroy_all

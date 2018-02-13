@@ -385,6 +385,8 @@ $(function() {
     
   $('body').on('click', '.thing-link', function() {
     zoomTo($(this).data('lat'), $(this).data('lng'), 20);
+    $('.sidebar').removeClass('sidebar-full');
+      
   });
 
   // Focus on the first non-empty text input or password field

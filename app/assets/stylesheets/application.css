@@ -133,6 +133,8 @@ h5.my-things {
 .sidebar p.tos {
   text-align: center;
   margin-bottom: 15px;
+  color: #f00; 
+  font-weight: bold; 
 }
 
 .sidebar p {
