@@ -119,12 +119,12 @@ h5.my-things {
 }
 
 .sidebar .navbar {
-  background-color: rgba(204, 204, 204, .4);
+  background-color: rgba(230, 230, 230, 1);
 }
 
 .sidebar {
 	height: 90px;
-  background-color: #fff;
+  background-color: #e6e6e6;
   z-index: 2;
 }
 
