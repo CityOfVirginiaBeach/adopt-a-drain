@@ -196,14 +196,26 @@ h5.my-things {
 
 .btn-primary {
   color: #fff;
-  background-color: #396B80;
-  border-color: #2e6da4;
+  background-color: #0fb99b;
+  border-color: #0fb99b;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #005596;
-  border-color: #204d74;
+  background-color: #0c6fb8;
+  border-color: #0c6fb8;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #0c6fb8;
+    border-color: #0c6fb8;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #0fb99b;
+    border-color: #0fb99b;
 }
 
 .btn-danger {
