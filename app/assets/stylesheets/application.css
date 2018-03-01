@@ -207,15 +207,15 @@ h5.my-things {
 }
 
 .btn-secondary {
-    color: #fff;
-    background-color: #0c6fb8;
-    border-color: #0c6fb8;
+    color: #fff !important;
+    background-color: #0c6fb8 !important;
+    border-color: #0c6fb8 !important;
 }
 
 .btn-secondary:hover {
     color: #fff;
-    background-color: #0fb99b;
-    border-color: #0fb99b;
+    background-color: #0fb99b !important;
+    border-color: #0fb99b !important;
 }
 
 .btn-danger {
