@@ -218,6 +218,19 @@ h5.my-things {
     border-color: #0fb99b !important;
 }
 
+.btn-warning {
+    color: #fff;
+    background-color: #0c6fb8;
+    border-color: #0c6fb8;
+}
+
+.btn-warning:hover {
+    color: #fff;
+    background-color: #0fb99b !important;
+    border-color: #0fb99b !important;
+}
+
+
 .btn-danger {
   color: #fff;
   background-color: #BF2620;
