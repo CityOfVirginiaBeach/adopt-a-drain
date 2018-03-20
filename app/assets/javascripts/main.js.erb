@@ -281,12 +281,13 @@ $(function() {
     map.setCenter(new google.maps.LatLng(lat, lng));
     map.setZoom(zoomLevel);
   }
+$(document).ready(function(){
   google.maps.event.addListener(map, 'idle', function() {
       console.log("Idle");
     var center = map.getCenter();
     addMarkersAround(center.lat(), center.lng());
   });
-
+});
   $('body').on('submit', '#password_edit_form', function() {
     var submitButton = $("#password_edit_form input[type='submit']");
     $(submitButton).attr("disabled", true);
