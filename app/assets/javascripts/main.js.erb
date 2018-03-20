@@ -39,11 +39,11 @@ $(function() {
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   //Adding in responsive listener for map
-  google.maps.event.addDomListener(window, "resize", function() {
-   var center = map.getCenter();
-   google.maps.event.trigger(map, "resize");
-   map.setCenter(center); 
-});
+  //google.maps.event.addDomListener(window, "resize", function() {
+//   var center = map.getCenter();
+//   google.maps.event.trigger(map, "resize");
+//   map.setCenter(center); 
+//});
 
 
   /* Start Google Geolocation Services
