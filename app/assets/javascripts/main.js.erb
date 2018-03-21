@@ -281,7 +281,7 @@ $(function() {
     map.setCenter(new google.maps.LatLng(lat, lng));
     map.setZoom(zoomLevel);
   }
-  google.maps.event.addListener(map, 'idle', function() {
+  google.maps.event.addListener(map, 'tilesloaded', function() {
     var center = map.getCenter();
     addMarkersAround(center.lat(), center.lng());
   });
