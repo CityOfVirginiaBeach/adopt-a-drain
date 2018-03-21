@@ -27,6 +27,6 @@ protected
   end
 
   def ssl_configured?
-    Rails.env.production?
+    Rails.env.production? || Rails.env.staging?
   end
 end
