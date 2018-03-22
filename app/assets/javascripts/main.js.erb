@@ -240,7 +240,7 @@ $(function() {
               // continue
               return true;
             }
-            setTimeout(function() {
+           
               var point = new google.maps.LatLng(thing.lat, thing.lng);
               var type = 'tosewer'
               if(thing.system_use_code == 'MS4') {
@@ -253,7 +253,7 @@ $(function() {
                 type = 'adoptedbyyou'
               }
               addMarker(thing.id, point, type, thing.user_id);
-            }, i * 100);
+        
           });
         }
       }
